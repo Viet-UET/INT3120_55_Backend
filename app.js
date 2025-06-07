@@ -2,6 +2,8 @@
 const express = require('express');
 const cors = require('cors'); // Import cors middleware
 const newsRoutes = require('./news.routes');
+const authRoutes = require('./auth.routes');
+const favoritesRoutes = require('./favorites.routes');
 
 const app = express();
 
@@ -11,10 +13,11 @@ app.use(cors());
 
 // Middleware để phân tích cú pháp JSON từ request body
 app.use(express.json());
-
 // Định nghĩa các route cho API tin tức
 // Tất cả các route trong newsRoutes sẽ có tiền tố /api/news
 app.use('/api/news', newsRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/favorites', favoritesRoutes);
 
 // Xử lý các route không tìm thấy (404 Not Found)
 app.use((req, res, next) => {
