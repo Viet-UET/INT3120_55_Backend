@@ -22,9 +22,7 @@ Một RESTful API backend cho ứng dụng đọc tin tức, cung cấp:
 ### Yêu cầu
 
 - Node.js >= 14
-- MongoDB (local hoặc MongoDB Atlas)
-- Tài khoản Google Developer để lấy `GOOGLE_CLIENT_ID`
-- Tài khoản NewsAPI để lấy `NEWS_API_KEY`
+- MongoDB 
 
 ### Cài đặt
 
